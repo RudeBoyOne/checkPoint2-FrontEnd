@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-image: url(./imgs/coresPastel1.jpg);
+            background-size: auto;
+            background-attachment: fixed;
+            /*background-position: bottom;*/
+            margin-top: 3%;
+            box-sizing: border-box;
+        }
+
+        form{
+            width: 350px;
+            margin: 0 auto;
+            padding: 2em;
+            border: 2px solid #CCC;
+            border-radius: 0.5em;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+        form div + div{
+            margin-top: 1.5em;
+        }
+
+        section{
+            margin-top: 1.5em;
+        }
+
+        h1{
+            margin-bottom: 0.8em;
+            /*text-decoration: underline;*/
+        }
+
+        button{
+            margin-top: 1.5em;
+        }
+
+        .labelPreencimento{
+            display: inline-block;
+            width: 100%;
+        }
+
+        .labelRadio{
+            display: inline-block;
+            width: 40%;
+        }
+
+        .labelCheckbox{
+            display: inline-block;
+            width: 40%;
+            padding: 0.5em 0.2em;
+        }
+
+        .inputPreenchimento{
+            width: 100%;
+            height: 2.2em;
+            box-sizing: border-box;
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
+        }
+
+        .inputPreenchimento:focus{
+            outline: 0;
+        }
+
+        .inputPreenchimento:hover{
+            padding: 7%;
+        }
+
+        .butao{
+            display: inline-block;
+            width: 100%;
+            height: 2.2em;
+            border-radius: 0.6em;
+            background-image: url(./imgs/fundoButao.png);
+            background-size: cover;
+            background-position: top;
+        }
+
+        .butao2:hover{
+            background-color: rgb(236, 81, 81);
+        }
+
+        .butao2{
+            display: block;
+            width: 50%;
+            height: 2em;
+            margin: 1.5em auto 0;
+            border-radius: 0.6em;
+        }
+    </style>
+    <title>CheckPoint2 - FrontEnd I</title>
+</head>
+<body>
+    <form action="https:checkPonit2.com.br" method="post">
+        <div>
+            <label for="nome" class="labelPreencimento">Nome</label><br>
+            <input type="text" maxlength="100" placeholder="digite seu nome completo" name="nome" id="nome" class="inputPreenchimento" required>
+        </div>
+        <div>
+            <label for="email" class="labelPreencimento">Email</label><br>
+            <input type="email" placeholder="digite seu e-mail" name="email" id="email" class="inputPreenchimento" required> 
+        </div>
+        <div>
+            <label for="telefone" class="labelPreencimento">Telefone</label><br>
+            <input type="tel" placeholder="digite seu telefone" name="telefone" id="telefone" class="inputPreenchimento" required>
+        </div>
+        <div>
+            <label for="nascimento" class="labelPreencimento">Data de nascimento</label><br>
+            <input type="date" name="nascimento" id="nascimento" class="inputPreenchimento">
+        </div>
+        <section>
+            <h1>Menor de idade:</h1>
+            
+            <input type="radio" name="pergunta" value="Sim" id="Sim" class="inputRadio">
+            <label for="Sim" class="labelRadio">Sim</label>
+            
+            <input type="radio" name="pergunta" value="Não" id="Não" class="inputRadio">
+            <label for="Não" class="labelRadio">Não</label>
+        </section>
+        <section>
+            <h1>Interesses na cidade:</h1>
+            <input type="checkbox" name="interesses" value="turista" id="turista" class="inputCheckbox">
+            <label for="turista" class="labelCheckbox">Turista</label>
+
+            <input type="checkbox" name="interesses" value="residente" id="residente" class="inputCheckbox">
+            <label for="residente" class="labelCheckbox">Residente</label>
+
+            <input type="checkbox" name="interesses" value="estudante" id="estudante" class="inputCheckbox">
+            <label for="estudante" class="labelCheckbox">Estudante</label>
+        </section>
+        <div>
+            <button type="submit" class="butao">Enviar</button>
+            <button type="reset" class="butao2">Cancelar</button>
+        </div>
+
+</form>
+</body>
+</html>
