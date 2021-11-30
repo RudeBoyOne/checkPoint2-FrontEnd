@@ -16,4 +16,6 @@
 
 ### Prévia:
 
-![previa](./imgs/testeForm.gif)
+<br/>
+
+![previa](./imgs/testeFormFinalizado.gif)
