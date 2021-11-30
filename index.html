@@ -79,18 +79,26 @@
             padding: 7%;
         }
 
+        .butao:hover{
+            font-weight: bold;
+            font-size:15px
+        }
+
         .butao{
             display: inline-block;
             width: 100%;
             height: 2.2em;
             border-radius: 0.6em;
             background-image: url(./imgs/fundoButao.png);
+            box-shadow: 10px 5px 5px black;
             background-size: cover;
             background-position: top;
+            
         }
 
         .butao2:hover{
             background-color: rgb(236, 81, 81);
+            font-weight: bold;
         }
 
         .butao2{
@@ -99,54 +107,88 @@
             height: 2em;
             margin: 1.5em auto 0;
             border-radius: 0.6em;
+            box-shadow: 3px 2px 2px black;
         }
         .fundo {
            
            box-shadow: rgb(136, 136, 134) 0px 0px 25px 10px;
-
        }
+
        
     </style>
     <title>CheckPoint2 - FrontEnd I</title>
 </head>
 <body>
+    
     <form action="aboult.html" method="post" class="fundo">
         <div>
             <label for="nome" class="labelPreencimento">Nome</label><br>
-            <input type="text" maxlength="100" placeholder="digite seu nome completo" name="nome" id="nome" class="inputPreenchimento" required>
+            <input type="text" maxlength="100" placeholder="Digite seu nome completo" name="nome" id="nome" class="inputPreenchimento" required>
         </div>
         <div>
             <label for="email" class="labelPreencimento">Email</label><br>
-            <input type="email" placeholder="digite seu e-mail" name="email" id="email" class="inputPreenchimento" required> 
+            <input type="email" placeholder="Digite seu e-mail" name="email" id="email" class="inputPreenchimento" required> 
         </div>
         <div>
             <label for="telefone" class="labelPreencimento">Telefone</label><br>
-            <input type="tel" placeholder="digite seu telefone" name="telefone" id="telefone" class="inputPreenchimento" required>
+            <input type="tel" placeholder="Digite seu telefone" name="telefone" id="telefone" class="inputPreenchimento" required>
         </div>
         <div>
             <label for="nascimento" class="labelPreencimento">Data de nascimento</label><br>
             <input type="date" name="nascimento" id="nascimento" class="inputPreenchimento">
         </div>
         <section>
-            <h1>Menor de idade:</h1>
+            <h1>Possui + de 18 anos?</h1>
             
             <input type="radio" name="pergunta" value="Sim" id="Sim" class="inputRadio">
             <label for="Sim" class="labelRadio">Sim</label>
             
             <input type="radio" name="pergunta" value="Não" id="Não" class="inputRadio">
             <label for="Não" class="labelRadio">Não</label>
+
+        
         </section>
         <section>
             <h1>Interesses na cidade:</h1>
-            <input type="checkbox" name="interesses" value="turista" id="turista" class="inputCheckbox">
-            <label for="turista" class="labelCheckbox">Turista</label>
+            
+            <input type="checkbox" name="interesses" value="parque" id="parque" class="inputCheckbox">
+            <label for="parque" class="labelCheckbox">Parque</label>
 
-            <input type="checkbox" name="interesses" value="residente" id="residente" class="inputCheckbox">
-            <label for="residente" class="labelCheckbox">Residente</label>
+            <input type="checkbox" name="interesses" value="esporte" id="esporte" class="inputCheckbox">
+            <label for="esporte" class="labelCheckbox">Esporte</label>
+            
+            <input type="checkbox" name="interesses" value="cultura" id="cultura" class="inputCheckbox">
+            <label for="cultura" class="labelCheckbox">Cultura</label>
 
-            <input type="checkbox" name="interesses" value="estudante" id="estudante" class="inputCheckbox">
-            <label for="estudante" class="labelCheckbox">Estudante</label>
+            <input type="checkbox" name="interesses" value="hospedagem" id="hospedagem" class="inputCheckbox">
+            <label for="hospedagem" class="labelCheckbox">Hospedagem</label>
+
+            <input type="checkbox" name="interesses" value="zona boemia" id="zona_boemia" class="inputCheckbox">
+            <label for="zona_boemia" class="labelCheckbox">Zona Boêmia</label>
+
+            <input type="checkbox" name="interesses" value="gastronomia" id="gastronomia" class="inputCheckbox">
+            <label for="gastronomia" class="labelCheckbox">Gastronomia</label>
+
+            <input type="checkbox" name="interesses" value="ensino" id="ensino" class="inputCheckbox">
+            <label for="ensino" class="labelCheckbox">Ensino</label>
+
+            <input type="checkbox" name="interesses" value="asocial" id="asocial" class="inputCheckbox">
+            <label for="asocial" class="labelCheckbox">Ação Social</label>
         </section>
+
+        <section>
+            <h1>Diga-nos quem você é:</h1>
+            
+            <input type="checkbox" name="perfil" value="turista" id="turista" class="inputCheckbox">
+            <label for="turista" class="labelCheckbox">Turista</label></section>
+
+            <input type="checkbox" name="perfil" value=residente" id="residente" class="inputCheckbox">
+            <label for="residente" class="labelCheckbox">Residente</label><br>
+
+            <input type="checkbox" name="perfil" value="estudante" id="estudante" class="inputCheckbox">
+            <label for="estudante" class="labelCheckbox">Estudante</label><br>
+        </section>
+
         <div>
             <button type="submit" class="butao">Enviar</button>
             <button type="reset" class="butao2">Cancelar</button>
